@@ -2468,6 +2468,6 @@ footer {
   height: 2.8rem;
   border-radius: 50%;
   overflow: hidden;
-  left: -48rem;
+  right: -1rem;
   position: relative;
 }

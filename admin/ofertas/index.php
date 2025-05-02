@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require_once "../../crud/function/conexao.php";
@@ -44,107 +45,61 @@ $dados = mysqli_fetch_assoc($resultado);
 </head>
 
 <body>
-    <div class="overlay" data-overlay></div>
+
 
 
 
 
     <header>
-        <div class="header-top">
-            <div class="container">
+    <div class="header-top">
+      <div class="container">
+       
 
-
-                <div class="header-alert-news">
-                    <p><b>BEM VINDO(A)</b> <?php echo htmlspecialchars($dados['nome']); ?> </p>
-                </div>
-
-                <button class="action-btn">
-                    <img class="photo" src="../../imgPerfil/<?php echo htmlspecialchars($dados['perfil_img']); ?>" alt="Foto de perfil do usuário">
-                </button>
-
-                <button class="action-btn">
-                    <a href="logout.php"> <ion-icon name="exit"></ion-icon> </a>
-                </button>
-
-
-            </div>
-        </div>
+        <div class="header-alert-news">
+          <p><b>BEM VINDO(A)</b> <?php echo htmlspecialchars($dados['nome']);?> </p>
         </div>
 
-        <div class="header-main">
-            <div class="container">
-                <img src="../../img/AL ARTES.jpg" alt="logo" width="120px" height="120px" />
+      
+      </div>
+    </div>
 
-                <div class="header-search-container">
-                    <input type="search" name="search" class="search-field" placeholder="Digite o nome do seu produto" />
-                </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo"><img src="../../img/AL ARTES.jpg" alt="logo" width="120px" height="120px"
+            height="36" /></a>
 
-                <button class="search-btn" id="open-cart">
-                    <ion-icon name="search-outline">
-                        <?php require "carrinho/index.php" ?>
-                    </ion-icon>
-                </button>
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Digite o nome do seu produto" />
 
-
-            </div>
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
         </div>
+
+        <div class="header-user-actions">
+          <button class="action-btn">
+          <img class="photo" src="../../imgPerfil/<?php echo htmlspecialchars($dados['perfil_img']); ?>" alt="Foto de perfil do usuário">
+          </button>
+
+
+       
+
+        </div>
+      </div>
+    </div>
+
+
 
         <nav class="desktop-navigation-menu">
             <div class="container">
                 <ul class="desktop-menu-category-list">
                     <li class="menu-category">
-                        <a href="index.php" class="menu-title">Home</a>
+                        <a href="../index.php" class="menu-title">Home</a>
                     </li>
 
                     <li class="menu-category">
-                        <a href="#" class="menu-title">CATEGORIA</a>
-                        <div class="dropdown-panel">
-                            <ul class="dropdown-panel-list">
-                                <li class="menu-title"><a href="#">Costura Criativa</a></li>
-                                <li class="panel-list-item"><a href="#">Patchwork </a></li>
-                                <li class="panel-list-item"><a href="#">Bordado </a></li>
-                                <li class="panel-list-item"><a href="#">Crochê </a></li>
-                                <li class="panel-list-item"><a href="#">Tricô </a></li>
-                            </ul>
-
-                            <ul class="dropdown-panel-list">
-                                <li class="menu-title"><a href="#">Masculino</a></li>
-                                <li class="panel-list-item"><a href="#">Formal</a></li>
-                                <li class="panel-list-item"><a href="#">Casual</a></li>
-                                <li class="panel-list-item"><a href="#">Esporte</a></li>
-                                <li class="panel-list-item"><a href="#">Jaqueta</a></li>
-                                <li class="panel-list-item"><a href="#"></a></li>
-                            </ul>
-
-                            <ul class="dropdown-panel-list">
-                                <li class="menu-title"><a href="#">Feminino</a></li>
-                                <li class="panel-list-item"><a href="#">Formal</a></li>
-                                <li class="panel-list-item"><a href="#">Casual</a></li>
-                                <li class="panel-list-item"><a href="#">Esporte</a></li>
-                                <li class="panel-list-item"><a href="#">Jaqueta</a></li>
-                                <li class="panel-list-item"><a href="#"></a></li>
-                            </ul>
-
-                            <ul class="dropdown-panel-list">
-                                <li class="menu-title"><a href="#">INFANTIL</a></li>
-                                <li class="panel-list-item"><a href="#">Formal</a></li>
-                                <li class="panel-list-item"><a href="#">Casual</a></li>
-                                <li class="panel-list-item"><a href="#">Esporte</a></li>
-                                <li class="panel-list-item"><a href="#">Jaqueta</a></li>
-                                <li class="panel-list-item"><a href="#"></a></li>
-                            </ul>
-                        </div>
+                        <a href="../index.php" class="menu-title">VOLTAR</a>
                     </li>
-
-                    <li class="menu-category">
-                        <a href="#" class="menu-title">CADASTRAR</a>
-                    </li>
-
-                    <li class="menu-category">
-                        <a href="#" class="menu-title">Ofertas Quentes</a>
-                    </li>
-
-
                 </ul>
             </div>
         </nav>
@@ -1476,7 +1431,7 @@ $dados = mysqli_fetch_assoc($resultado);
                         <div class="product-grid">
                             <?php
                             // Consulta para buscar os produtos
-                            $sql = "SELECT * FROM produto ORDER BY data_cadastro DESC LIMIT 12";
+                            $sql = "SELECT * FROM produtos ORDER BY data_cadastro DESC LIMIT 12";
                             $result = $conexao->query($sql);
 
                             // Verifica se há resultados
@@ -1489,8 +1444,8 @@ $dados = mysqli_fetch_assoc($resultado);
                                     $desconto = ($produto['desconto'] > 0) ? $produto['desconto'] . '%' : null;
 
                                     // Tratamento das imagens (caminhos relativos)
-                                    $imgPrincipal = !empty($produto['imagem_principal']) ? 'img/' . $produto['imagem_principal'] : 'img/sem-imagem.jpg';
-                                    $imgHover = !empty($produto['imagem_hover']) ? 'img/' . $produto['imagem_hover'] : $imgPrincipal;
+                                    $imgPrincipal = !empty($produto['imagem_principal']) ? '../../imgProdutos/' . $produto['imagem_principal'] : 'img/sem-imagem.jpg';
+                                    $imgHover = !empty($produto['imagem_hover']) ? '../../imgProdutos/' . $produto['imagem_hover'] : $imgPrincipal;
                             ?>
                                     <div class="showcase">
                                         <div class="showcase-banner">

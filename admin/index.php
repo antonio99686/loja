@@ -46,53 +46,9 @@ $dados = mysqli_fetch_assoc($resultado);
 <body>
   <div class="overlay" data-overlay></div>
 
-  <div class="modal" data-modal>
-    <div class="modal-close-overlay" data-modal-overlay></div>
+  
 
-    <div class="modal-content">
-      <button class="modal-close-btn" data-modal-close>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
 
-      <div class="newsletter-img">
-        <img src="../img/AL ARTES.jpg" alt="image" width="400" height="400" />
-      </div>
-
-      <div class="newsletter">
-        <form action="#">
-          <div class="newsletter-header">
-            <h3 class="newsletter-title">Assinar boletim informativo</h3>
-
-            <p class="newsletter-desc">
-              Inscreva-se no <b>AL - ARTES </b> para obter os últimos produtos
-              e atualizações de desconto
-            </p>
-          </div>
-
-          <input type="email" name="email" class="email-field" placeholder="Email" required />
-
-          <button type="submit" class="btn-newsletter">Inscreva-se</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="notification-toast" data-toast>
-    <button class="toast-close-btn" data-toast-close>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
-
-    <div class="toast-banner">
-      <img src="../img/tapete_croche.jfif" alt="Ocean Golden Tear Earrings" width="80"
-        height="70" />
-    </div>
-
-    <div class="toast-detail">
-      <p class="toast-message">Alguém acabou de comprar este item</p>
-      <p class="toast-title">Tapete Branco</p>
-      <p class="toast-meta"><time datetime="PT2M">2 minutos</time> atrás</p>
-    </div>
-  </div>
 
   <header>
     <div class="header-top">
@@ -116,22 +72,7 @@ $dados = mysqli_fetch_assoc($resultado);
           <p><b>BEM VINDO(A)</b> <?php echo htmlspecialchars($dados['nome']);?> </p>
         </div>
 
-        <div class="header-top-actions">
-          <select name="currency">
-            <option value="eur">REAL &real;;</option>
-            <option value="usd">USD &dollar;</option>
-            <option value="eur">EUR &euro;</option>
-          </select>
-
-          <select name="language">
-            <option value="pt-br">Portugues (Brasil)</option>
-            <option value="en-US">English</option>
-            <option value="es-ES">Espanhol</option>
-            <option value="fr">Franais</option>
-          </select>
-
-
-        </div>
+        
       </div>
     </div>
 
@@ -143,9 +84,7 @@ $dados = mysqli_fetch_assoc($resultado);
         <div class="header-search-container">
           <input type="search" name="search" class="search-field" placeholder="Digite o nome do seu produto" />
 
-          <button class="search-btn">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
+       
         </div>
 
         <div class="header-user-actions">
@@ -154,15 +93,9 @@ $dados = mysqli_fetch_assoc($resultado);
           </button>
 
 
-          <button class="action-btn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
+         
 
-          <button class="action-btn">
-          <a href="logout.php">  <ion-icon name="exit"></ion-icon> </a>
-          </button>
-
+          
         </div>
       </div>
     </div>
@@ -215,11 +148,18 @@ $dados = mysqli_fetch_assoc($resultado);
           </li>
           
           <li class="menu-category">
-            <a href="#" class="menu-title">CADASTRAR</a>
+            <a href="ofertas/cad/cadOferta.php" class="menu-title">CADASTRAR</a>
+          </li>
+          <li class="menu-category">
+            <a href="ofertas/cad/cadOferta.php" class="menu-title">EDITAR</a>
           </li>
 
           <li class="menu-category">
             <a href="ofertas/index.php" class="menu-title">Ofertas Quentes</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="logout.php" class="menu-title">SAIR</a>
           </li>
 
 
@@ -2473,236 +2413,236 @@ $dados = mysqli_fetch_assoc($resultado);
   </main>
 
   <footer>
-    <div class="footer-category">
-      <div class="container">
-        <h2 class="footer-category-title">Brand Directory</h2>
+        <div class="footer-category">
+            <div class="container">
+                <h2 class="footer-category-title">Diretório de Marcas</h2>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Fashion :</h3>
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Moda:</h3>
 
-          <a href="#" class="footer-category-link">T-Shirt</a>
-          <a href="#" class="footer-category-link">Shirts</a>
-          <a href="#" class="footer-category-link">Shorts & Jeans</a>
-          <a href="#" class="footer-category-link">Jacket</a>
-          <a href="#" class="footer-category-link">Dress & Frock</a>
-          <a href="#" class="footer-category-link">Innerwear</a>
-          <a href="#" class="footer-category-link">Hosiery</a>
-        </div>
+                    <a href="#" class="footer-category-link">Camisetas</a>
+                    <a href="#" class="footer-category-link">Camisas</a>
+                    <a href="#" class="footer-category-link">Shorts e Jeans</a>
+                    <a href="#" class="footer-category-link">Jaquetas</a>
+                    <a href="#" class="footer-category-link">Vestidos</a>
+                    <a href="#" class="footer-category-link">Roupas íntimas</a>
+                    <a href="#" class="footer-category-link">Meias</a>
+                </div>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Footwear :</h3>
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Calçados:</h3>
 
-          <a href="#" class="footer-category-link">Sport</a>
-          <a href="#" class="footer-category-link">Formal</a>
-          <a href="#" class="footer-category-link">Boots</a>
-          <a href="#" class="footer-category-link">Casual</a>
-          <a href="#" class="footer-category-link">Cowboy Shoes</a>
-          <a href="#" class="footer-category-link">Safety Shoes</a>
-          <a href="#" class="footer-category-link">Party Wear Shoes</a>
-          <a href="#" class="footer-category-link">Branded</a>
-          <a href="#" class="footer-category-link">Firstcopy</a>
-          <a href="#" class="footer-category-link">Long Shoes</a>
-        </div>
+                    <a href="#" class="footer-category-link">Esportivo</a>
+                    <a href="#" class="footer-category-link">Social</a>
+                    <a href="#" class="footer-category-link">Botas</a>
+                    <a href="#" class="footer-category-link">Casual</a>
+                    <a href="#" class="footer-category-link">Sapatos cowboy</a>
+                    <a href="#" class="footer-category-link">Sapatos de segurança</a>
+                    <a href="#" class="footer-category-link">Sapatos para festas</a>
+                    <a href="#" class="footer-category-link">Marcas</a>
+                    <a href="#" class="footer-category-link">Réplicas</a>
+                    <a href="#" class="footer-category-link">Sapatos alongados</a>
+                </div>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Jewellery :</h3>
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Joias:</h3>
 
-          <a href="#" class="footer-category-link">Necklace</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple Rings</a>
-          <a href="#" class="footer-category-link">Pendant</a>
-          <a href="#" class="footer-category-link">Crystal</a>
-          <a href="#" class="footer-category-link">Bangles</a>
-          <a href="#" class="footer-category-link">Bracelets</a>
-          <a href="#" class="footer-category-link">Nosepin</a>
-          <a href="#" class="footer-category-link">Chain</a>
-        </div>
+                    <a href="#" class="footer-category-link">Colares</a>
+                    <a href="#" class="footer-category-link">Brincos</a>
+                    <a href="#" class="footer-category-link">Alianças</a>
+                    <a href="#" class="footer-category-link">Pingentes</a>
+                    <a href="#" class="footer-category-link">Cristais</a>
+                    <a href="#" class="footer-category-link">Pulseiras</a>
+                    <a href="#" class="footer-category-link">Braceletes</a>
+                    <a href="#" class="footer-category-link">Piercings</a>
+                    <a href="#" class="footer-category-link">Correntes</a>
+                </div>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Cosmetics :</h3>
+                <div class="footer-category-box">
+                    <h3 class="category-box-title">Cosméticos:</h3>
 
-          <a href="#" class="footer-category-link">Shampoo</a>
-          <a href="#" class="footer-category-link">Bodywash</a>
-          <a href="#" class="footer-category-link">Facewash</a>
-          <a href="#" class="footer-category-link">Makeup Kit</a>
-          <a href="#" class="footer-category-link">Liner</a>
-          <a href="#" class="footer-category-link">Lipstick</a>
-          <a href="#" class="footer-category-link">Perfume</a>
-          <a href="#" class="footer-category-link">Body Soap</a>
-          <a href="#" class="footer-category-link">Scrub</a>
-          <a href="#" class="footer-category-link">Hair Gel</a>
-          <a href="#" class="footer-category-link">Hair Colors</a>
-          <a href="#" class="footer-category-link">Hair Dye</a>
-          <a href="#" class="footer-category-link">Sunscreen</a>
-          <a href="#" class="footer-category-link">Skin Loson</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-nav">
-      <div class="container">
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Popular Categories</h2>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Fashion</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Electronic</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cosmetic</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Health</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Watches</a>
-          </li>
-        </ul>
-
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Products</h2>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Fashion</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Electronic</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cosmetic</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Health</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Watches</a>
-          </li>
-        </ul>
-
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Our Company</h2>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Delivery</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Legal Notice</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Terms and Conditions</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">About us</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Secure Payment</a>
-          </li>
-        </ul>
-
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Services</h2>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices Drop</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New Products</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best Sales</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
-          </li>
-        </ul>
-
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Contact</h2>
-          </li>
-
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
+                    <a href="#" class="footer-category-link">Xampu</a>
+                    <a href="#" class="footer-category-link">Sabonete líquido</a>
+                    <a href="#" class="footer-category-link">Sabonete facial</a>
+                    <a href="#" class="footer-category-link">Kit de maquiagem</a>
+                    <a href="#" class="footer-category-link">Lápis de olho</a>
+                    <a href="#" class="footer-category-link">Batom</a>
+                    <a href="#" class="footer-category-link">Perfume</a>
+                    <a href="#" class="footer-category-link">Sabonete corporal</a>
+                    <a href="#" class="footer-category-link">Esmalte</a>
+                    <a href="#" class="footer-category-link">Gel para cabelo</a>
+                    <a href="#" class="footer-category-link">Tintura para cabelo</a>
+                    <a href="#" class="footer-category-link">Descolorante</a>
+                    <a href="#" class="footer-category-link">Protetor solar</a>
+                    <a href="#" class="footer-category-link">Loção para pele</a>
+                </div>
             </div>
+        </div>
 
-            <address class="content">
-              419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
-            </address>
-          </li>
+        <div class="footer-nav">
+            <div class="container">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Categorias Populares</h2>
+                    </li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="call-outline"></ion-icon>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Moda</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Eletrônicos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Cosméticos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Saúde</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Relógios</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Produtos</h2>
+                    </li>
+
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Moda</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Eletrônicos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Cosméticos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Saúde</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Relógios</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Nossa Empresa</h2>
+                    </li>
+
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Entrega</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Aviso Legal</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Termos e Condições</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Sobre nós</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Pagamento Seguro</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Serviços</h2>
+                    </li>
+
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Queda de preços</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Novos produtos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Melhores vendas</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Contate-nos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#" class="footer-nav-link">Mapa do site</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Contato</h2>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <address class="content">
+                            COHAB II Q19 CASA 302 URUGUAINA RS - BRASIL
+                        </address>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+
+                        <a href="tel:+607936-8058" class="footer-nav-link">+55(55) 99998-2163 </a>
+                    </li>
+
+                    <li class="footer-nav-item flex">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <a href="mailto:example@gmail.com" class="footer-nav-link">AL_artes@gmail.com</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <h2 class="nav-title">Siga-nos</h2>
+                    </li>
+
+                    <li>
+                        <ul class="social-link">
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            </li>
+
+                            <li class="footer-nav-item">
+                                <a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
-          </li>
+        <div class="footer-bottom">
+            <div class="container">
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+                <p class="copyright">
+                    Copyright &copy; <a href="#">AL-ARTES</a> todos os direitos reservados
+                </p>
             </div>
+        </div>
+    </footer>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
-          </li>
-        </ul>
+    <script src="main.js"></script>
 
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Follow Us</h2>
-          </li>
-
-          <li>
-            <ul class="social-link">
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a>
-              </li>
-
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a>
-              </li>
-
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a>
-              </li>
-
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <img src="https://i.postimg.cc/43GKnVFF/payment.png" alt="payment method" class="payment-img" />
-        <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
