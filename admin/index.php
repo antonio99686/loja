@@ -55,7 +55,7 @@ $dados = mysqli_fetch_assoc($resultado);
       </button>
 
       <div class="newsletter-img">
-        <img src="img/AL ARTES.jpg" alt="image" width="400" height="400" />
+        <img src="../img/AL ARTES.jpg" alt="image" width="400" height="400" />
       </div>
 
       <div class="newsletter">
@@ -83,7 +83,7 @@ $dados = mysqli_fetch_assoc($resultado);
     </button>
 
     <div class="toast-banner">
-      <img src="img/tapete_croche.jfif" alt="Ocean Golden Tear Earrings" width="80"
+      <img src="../img/tapete_croche.jfif" alt="Ocean Golden Tear Earrings" width="80"
         height="70" />
     </div>
 
@@ -129,17 +129,19 @@ $dados = mysqli_fetch_assoc($resultado);
             <option value="es-ES">Espanhol</option>
             <option value="fr">Franais</option>
           </select>
+
+
         </div>
       </div>
     </div>
 
     <div class="header-main">
       <div class="container">
-        <a href="#" class="header-logo"><img src="img/AL ARTES.jpg" alt="logo" width="120px" height="120px"
+        <a href="#" class="header-logo"><img src="../img/AL ARTES.jpg" alt="logo" width="120px" height="120px"
             height="36" /></a>
 
         <div class="header-search-container">
-          <input type="search" name="search" class="search-field" placeholder="Enter your product name" />
+          <input type="search" name="search" class="search-field" placeholder="Digite o nome do seu produto" />
 
           <button class="search-btn">
             <ion-icon name="search-outline"></ion-icon>
@@ -148,18 +150,19 @@ $dados = mysqli_fetch_assoc($resultado);
 
         <div class="header-user-actions">
           <button class="action-btn">
-            <ion-icon name="person-outline"></ion-icon>
+          <img class="photo" src="../imgPerfil/<?php echo htmlspecialchars($dados['perfil_img']); ?>" alt="Foto de perfil do usuário">
           </button>
 
-          <button class="action-btn">
-            <ion-icon name="heart-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
 
           <button class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
           </button>
+
+          <button class="action-btn">
+          <a href="logout.php">  <ion-icon name="exit"></ion-icon> </a>
+          </button>
+
         </div>
       </div>
     </div>
@@ -168,26 +171,18 @@ $dados = mysqli_fetch_assoc($resultado);
       <div class="container">
         <ul class="desktop-menu-category-list">
           <li class="menu-category">
-            <a href="#" class="menu-title">Home</a>
+            <a href="index.php" class="menu-title">Home</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Categoria</a>
-
+            <a href="#" class="menu-title">CATEGORIA</a>
             <div class="dropdown-panel">
               <ul class="dropdown-panel-list">
-                <li class="menu-title"><a href="#">Eletrônicos</a></li>
-                <li class="panel-list-item"><a href="#">Desktop</a></li>
-                <li class="panel-list-item"><a href="#">Laptop</a></li>
-                <li class="panel-list-item"><a href="#">Câmera</a></li>
-                <li class="panel-list-item"><a href="#">Câmera</a></li>
-                <li class="panel-list-item">
-                  <a href="#">Fone de ouvido</a>
-                </li>
-                <li class="panel-list-item">
-                  <img src="https://i.postimg.cc/MT2mT9ty/electronics-banner-1.jpg" alt="image" width="250"
-                    height="119" />
-                </li>
+                <li class="menu-title"><a href="#">Costura Criativa</a></li>
+                <li class="panel-list-item"><a href="#">Patchwork </a></li>
+                <li class="panel-list-item"><a href="#">Bordado </a></li>
+                <li class="panel-list-item"><a href="#">Crochê </a></li>
+                <li class="panel-list-item"><a href="#">Tricô  </a></li>
               </ul>
 
               <ul class="dropdown-panel-list">
@@ -196,95 +191,38 @@ $dados = mysqli_fetch_assoc($resultado);
                 <li class="panel-list-item"><a href="#">Casual</a></li>
                 <li class="panel-list-item"><a href="#">Esporte</a></li>
                 <li class="panel-list-item"><a href="#">Jaqueta</a></li>
-                <li class="panel-list-item"><a href="#">Óculos de sol</a></li>
-                <li class="panel-list-item">
-                  <img src="https://i.postimg.cc/nVs954kx/mens-banner.jpg" alt="image" width="250" height="119" />
-                </li>
+                <li class="panel-list-item"><a href="#"></a></li>
               </ul>
 
               <ul class="dropdown-panel-list">
                 <li class="menu-title"><a href="#">Feminino</a></li>
                 <li class="panel-list-item"><a href="#">Formal</a></li>
                 <li class="panel-list-item"><a href="#">Casual</a></li>
-                <li class="panel-list-item"><a href="#">Perfume</a></li>
-                <li class="panel-list-item"><a href="#">Cosméticos</a></li>
-                <li class="panel-list-item"><a href="#">Bolsas</a></li>
-                <li class="panel-list-item">
-                  <img src="https://i.postimg.cc/vT9Bmvq6/womens-banner.jpg" alt="image" width="250" height="119" />
-                </li>
+                <li class="panel-list-item"><a href="#">Esporte</a></li>
+                <li class="panel-list-item"><a href="#">Jaqueta</a></li>
+                <li class="panel-list-item"><a href="#"></a></li>
               </ul>
 
               <ul class="dropdown-panel-list">
-                <li class="menu-title"><a href="#">Eletrônicos</a></li>
-                <li class="panel-list-item"><a href="#">Smart Watch</a></li>
-                <li class="panel-list-item"><a href="#">Smart TV</a></li>
-                <li class="panel-list-item"><a href="#">Teclado</a></li>
-                <li class="panel-list-item"><a href="#">Mouse</a></li>
-                <li class="panel-list-item"><a href="#">Microfone</a></li>
-                <li class="panel-list-item">
-                  <img src="https://i.postimg.cc/htMGhvrM/electronics-banner-2.jpg" alt="image" width="250"
-                    height="119" />
-                </li>
+                <li class="menu-title"><a href="#">INFANTIL</a></li>
+                <li class="panel-list-item"><a href="#">Formal</a></li>
+                <li class="panel-list-item"><a href="#">Casual</a></li>
+                <li class="panel-list-item"><a href="#">Esporte</a></li>
+                <li class="panel-list-item"><a href="#">Jaqueta</a></li>
+                <li class="panel-list-item"><a href="#"></a></li>
               </ul>
             </div>
           </li>
-
+          
           <li class="menu-category">
-            <a href="#" class="menu-title">Masculino</a>
-
-            <ul class="dropdown-list">
-              <li class="dropdown-item"><a href="#">Camisa</a></li>
-              <li class="dropdown-item"><a href="#">Shorts e Jeans</a></li>
-              <li class="dropdown-item">
-                <a href="#">Calçados de Segurança</a>
-              </li>
-              <li class="dropdown-item"><a href="#">Carteira</a></li>
-            </ul>
+            <a href="#" class="menu-title">CADASTRAR</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Feminino</a>
-
-            <ul class="dropdown-list">
-              <li class="dropdown-item"><a href="#">Vestido e vestido</a></li>
-              <li class="dropdown-item"><a href="#">Brincos</a></li>
-              <li class="dropdown-item"><a href="#">Colar</a></li>
-              <li class="dropdown-item"><a href="#">Kit de maquiagem</a></li>
-            </ul>
-          </li>
-          <li class="menu-category">
-            <a href="#" class="menu-title">Joias</a>
-
-            <ul class="dropdown-list">
-              <li class="dropdown-item"><a href="#">Brincos</a></li>
-              <li class="dropdown-item"><a href="#">Anéis de casal</a></li>
-              <li class="dropdown-item"><a href="#">Colar</a></li>
-              <li class="dropdown-item"><a href="#">Pulseiras</a></li>
-            </ul>
+            <a href="ofertas/index.php" class="menu-title">Ofertas Quentes</a>
           </li>
 
-          <li class="menu-category">
-            <a href="#" class="menu-title">Perfume</a>
 
-            <ul class="dropdown-list">
-              <li class="dropdown-item">
-                <a href="#">Perfume para roupas</a>
-              </li>
-              <li class="dropdown-item"><a href="#">Desodorante</a></li>
-              <li class="dropdown-item">
-                <a href="#">Fragrância de flores</a>
-              </li>
-              <li class="dropdown-item"><a href="#">Ambientador</a></li>
-            </ul>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title">Blog</a>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title">Ofertas Quentes</a>
-          </li>
         </ul>
       </div>
     </nav>
