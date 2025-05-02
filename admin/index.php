@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once "function/conexao.php";
+require_once "../crud/function/conexao.php";
 $conexao = conn();
-sleep(1);
+
 
 // Verifica se a sessão está iniciada e se o usuário está logado
 if (!isset($_SESSION['id_usuario']) || empty($_SESSION['id_usuario'])) {
